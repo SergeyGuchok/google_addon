@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Script runner",
+  "version": "1.0",
+  "icons": {
+    "128": "128x128.png"
+  },
+  "browser_action": {
+    "default_title": "Script runner",
+    "default_icon": "128x128.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["declarativeContent","storage"],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      },
+      "description": "Opens index.html"
+    }
+  },
+  "background": {
+    "scripts": ["index.js"],
+    "persistent": false
+  }
+}
